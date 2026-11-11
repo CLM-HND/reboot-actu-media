@@ -31,8 +31,17 @@ La couverture = image + gros titre accrocheur, rien d'autre. Elle doit donner en
 - Jamais de logos de marques redessinés, jamais de photos de personnes réelles identifiables (célébrités) récupérées sur le web.
 
 ## Description (caption)
-- 2 phrases d'accroche qui résument la news, une question pour les commentaires avec 👇, une ligne « Source : … », 4–6 hashtags (#techfr #actutech + thème).
+- 2 phrases d'accroche qui résument la news, une question pour les commentaires avec 👇, une ligne « Source : … », puis les hashtags.
+- La première phrase contient les mots-clés que les gens taperaient dans la recherche Insta (ex. « IA », « ChatGPT », « iPhone », « GTA 6 ») : la recherche Instagram lit le texte de la description.
 - Faits uniquement tirés de sources vérifiées le jour même ; ne rien inventer.
+
+## Hashtags (Instagram limite à 5 par post depuis juin 2026)
+Exactement 5, en minuscules, sans accents, à la fin de la description :
+1. `#actutech` (toujours, c'est la signature du compte)
+2. un hashtag tech FR de niche : `#techfr`, `#iafr`, `#gamingfr`, `#cybersecurite`, `#smartphonefr`… selon le sujet
+3. et 4. deux hashtags précis sur le sujet du jour (le produit, la marque ou le thème : `#chatgpt`, `#gta6`, `#iphone18`, `#binance`…)
+5. un hashtag d'audience : `#etudiant`, `#gamer`, `#geek`, `#nouvelletechnologie`…
+Préférer les hashtags précis et moyennement utilisés aux énormes hashtags génériques (#tech, #ai) où le post est noyé.
 
 ## Publication
 - Images poussées dans `posts/AAAA-MM-JJ/` de ce dépôt public, URL : `https://raw.githubusercontent.com/CLM-HND/reboot-actu-media/main/posts/AAAA-MM-JJ/N.jpg`
