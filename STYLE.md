@@ -43,6 +43,15 @@ Exactement 5, en minuscules, sans accents, à la fin de la description :
 5. un hashtag d'audience : `#etudiant`, `#gamer`, `#geek`, `#nouvelletechnologie`…
 Préférer les hashtags précis et moyennement utilisés aux énormes hashtags génériques (#tech, #ai) où le post est noyé.
 
+## Reels (lundi, mercredi, vendredi)
+- Motion design vertical 1080×1920, 18–22 s, SANS voix (Clément ne veut pas de voix de synthèse).
+- Même style que le carrousel du jour : photo qui zoome doucement, chiffres qui défilent, titres Anton + serif qui arrivent en rythme, fonds noir / beige / orange, scène finale « ET TOI ? » orange.
+- Changements de scène calés sur le tempo de la musique. Zones sûres : rien d'important à moins de 250 px du haut, 350 px du bas, 120 px du bord droit.
+- Musique : piste instrumentale libre d'Adobe Stock (asset_search contentType "Audio", pricing "free", puis licence). Ne JAMAIS pousser le fichier audio dans ce dépôt public.
+- Outils : `tools/reel/exemple-reel.html` (modèle d'animation : `window.render(t)` et `window.DURATION`) et `tools/reel/capture.py` (capture image par image). Puis encodage avec ffmpeg, H.264 + AAC, 30 i/s, faststart.
+- Fichiers à déposer : `reel.mp4`, `reel-cover.jpg` (image de la vidéo où le titre est lisible) et `reel-caption.txt` (même règles que la description, 5 hashtags).
+
 ## Publication
-- Images poussées dans `posts/AAAA-MM-JJ/` de ce dépôt public, URL : `https://raw.githubusercontent.com/CLM-HND/reboot-actu-media/main/posts/AAAA-MM-JJ/N.jpg`
-- Publication via le connecteur Windsor.ai (instagram, create_carousel_post, compte reboot.actu).
+- Fichiers poussés dans `posts/AAAA-MM-JJ/` de ce dépôt public.
+- Liens publics via jsDelivr (bons types MIME, indispensable pour la vidéo) : `https://cdn.jsdelivr.net/gh/CLM-HND/reboot-actu-media@<hash du commit>/posts/AAAA-MM-JJ/<fichier>`
+- Publication via le connecteur Windsor.ai : instagram, create_carousel_post pour le carrousel et create_video_post pour le Reel, compte reboot.actu.
