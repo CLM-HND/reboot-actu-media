@@ -45,11 +45,13 @@ Préférer les hashtags précis et moyennement utilisés aux énormes hashtags g
 
 ## Reels (lundi, mercredi, vendredi)
 - Motion design vertical 1080×1920, 18–22 s, SANS voix (Clément ne veut pas de voix de synthèse).
-- Même style que le carrousel du jour : photo qui zoome doucement, chiffres qui défilent, titres Anton + serif qui arrivent en rythme, fonds noir / beige / orange, scène finale « ET TOI ? » orange.
+- DYNAMIQUE avant tout (retour de Clément) : une coupe toutes les 1 à 2,5 s, 8 à 10 scènes, mélange de VRAIS EXTRAITS VIDÉO Adobe Stock (gratuits, contentType "Video", pricing "free", licence en 1080) et de photos, mots qui arrivent un par un sur le temps, titres qui « claquent » (zoom 1,6→1 avec rebond), compteurs de chiffres, petit coup de zoom caméra sur chaque temps, flash court à chaque coupe, polaroid qui tombe.
+- Au moins 3 extraits vidéo différents par Reel. Découpe-les avec ffmpeg en images JPEG 1080×1920 à 30 i/s (crop 9:16) dans un dossier clips/ et charge-les image par image (voir le modèle).
+- Même charte que le carrousel : Anton + Instrument Serif italique + Inter Tight, noir / beige / orange #FF5A1F, scène finale « ET TOI ? » orange.
 - Changements de scène calés sur le tempo de la musique. Zones sûres : rien d'important à moins de 250 px du haut, 350 px du bas, 120 px du bord droit.
-- Musique : piste instrumentale libre d'Adobe Stock (asset_search contentType "Audio", pricing "free", puis licence). Ne JAMAIS pousser le fichier audio dans ce dépôt public.
-- Outils : `tools/reel/exemple-reel.html` (modèle d'animation : `window.render(t)` et `window.DURATION`) et `tools/reel/capture.py` (capture image par image). Puis encodage avec ffmpeg, H.264 + AAC, 30 i/s, faststart.
-- Fichiers à déposer : `reel.mp4`, `reel-cover.jpg` (image de la vidéo où le titre est lisible) et `reel-caption.txt` (même règles que la description, 5 hashtags).
+- Musique : piste instrumentale libre d'Adobe Stock (asset_search contentType "Audio", pricing "free", puis licence). Ne JAMAIS pousser l'audio ni les extraits vidéo bruts dans ce dépôt public.
+- Outils : `tools/reel/exemple-reel.html` (modèle validé : scènes, `window.render(t)` asynchrone, `window.DURATION`) et `tools/reel/capture.py` (capture image par image). Encodage ffmpeg H.264 + AAC, 30 i/s, -movflags +faststart.
+- Fichiers à déposer : `reel.mp4`, `reel-cover.jpg` (image où le titre est lisible), `reel-caption.txt` (mêmes règles que la description, 5 hashtags).
 
 ## Publication
 - Fichiers poussés dans `posts/AAAA-MM-JJ/` de ce dépôt public.

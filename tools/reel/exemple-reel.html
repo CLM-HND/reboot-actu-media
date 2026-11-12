@@ -6,97 +6,158 @@
 <style>
   html, body { margin: 0; background: #161616; }
   #stage { width: 1080px; height: 1920px; position: relative; overflow: hidden; background: #161616; }
+  #cam { position: absolute; inset: 0; transform-origin: 50% 45%; }
   .scene { position: absolute; inset: 0; display: none; overflow: hidden; }
+  .bg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
   .anton { font-family: 'Anton', sans-serif; }
   .serif { font-family: 'Instrument Serif', serif; font-style: italic; }
   .sans { font-family: 'Inter Tight', sans-serif; font-weight: 600; }
   .abs { position: absolute; }
+  .tag { display: inline-block; background: #FF5A1F; color: #161616; padding: 4px 24px 0; }
+  .shade { position: absolute; left: 0; bottom: 0; width: 1080px; height: 1200px; background: linear-gradient(0deg, rgba(10,10,12,.92) 35%, rgba(10,10,12,0) 100%); }
+  .w { display: inline-block; white-space: nowrap; }
+  #flash { position: absolute; inset: 0; background: #FFF3E2; opacity: 0; pointer-events: none; }
 </style>
 </head>
 <body>
-<div id="stage">
+<div id="stage"><div id="cam">
 
-  <!-- S1 : couverture photo -->
+  <!-- 1 : mains qui tapent (vidéo) + 79 % -->
   <div class="scene" id="s1">
-    <img id="s1img" src="etudiante.jpg" class="abs" style="left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:56% 50%;transform-origin:56% 40%">
-    <div class="abs" style="left:0;bottom:0;width:1080px;height:1150px;background:linear-gradient(0deg,rgba(10,10,12,.94) 38%,rgba(10,10,12,0) 100%)"></div>
-    <div class="abs" style="left:64px;right:120px;top:980px">
-      <div id="s1a" class="anton" style="display:inline-block;background:#FF5A1F;color:#161616;padding:4px 26px 0;font-size:250px;line-height:1;letter-spacing:-3px;transform-origin:0 100%">79&nbsp;%</div>
-      <div id="s1b" class="serif" style="color:#FFF3E2;font-size:112px;line-height:.98;margin-top:28px">des étudiants font leurs devoirs</div>
-      <div id="s1c" class="anton" style="color:#FFF3E2;font-size:170px;line-height:.95">AVEC L'IA</div>
+    <img class="bg clip" data-clip="typing" alt="">
+    <div class="shade"></div>
+    <div class="abs" style="left:64px;right:120px;top:1060px">
+      <div id="s1a" class="anton tag" style="font-size:300px;line-height:1;letter-spacing:-4px;transform-origin:0 100%">79&nbsp;%</div>
     </div>
   </div>
 
-  <!-- S2 : 79 % -->
-  <div class="scene" id="s2" style="background:#161616">
-    <div class="abs" style="left:64px;right:120px;top:560px">
-      <div id="s2t" class="serif" style="color:#FFF3E2;font-size:100px;line-height:1">Le chiffre</div>
-      <div id="s2n" class="anton" style="color:#FF5A1F;font-size:420px;line-height:1;letter-spacing:-6px;margin-top:20px">79&nbsp;%</div>
-      <div id="s2l" class="sans" style="color:#FFF3E2;font-size:58px;line-height:1.2">utilisent l'IA pour leurs devoirs</div>
+  <!-- 2 : photo étudiante + phrase mot à mot -->
+  <div class="scene" id="s2">
+    <img id="s2img" class="bg" src="etudiante.jpg" style="object-position:56% 50%;transform-origin:58% 38%" alt="">
+    <div class="shade"></div>
+    <div class="abs" style="left:64px;right:120px;top:1020px">
+      <div class="serif" style="color:#FFF3E2;font-size:118px;line-height:1">
+        <span class="w" id="s2w1">des étudiants</span> <span class="w" id="s2w2">font leurs devoirs</span>
+      </div>
+      <div id="s2w3" class="anton" style="color:#FFF3E2;font-size:200px;line-height:.95;transform-origin:0 50%">AVEC L'IA</div>
     </div>
   </div>
 
-  <!-- S3 : 47 % -->
+  <!-- 3 : compteur 79 -->
   <div class="scene" id="s3" style="background:#161616">
-    <div class="abs" style="left:64px;right:120px;top:560px">
-      <div id="s3t" class="serif" style="color:#FFF3E2;font-size:100px;line-height:1">Mais seulement</div>
-      <div id="s3n" class="anton" style="color:#FFF3E2;font-size:420px;line-height:1;letter-spacing:-6px;margin-top:20px">47&nbsp;%</div>
-      <div id="s3l" class="sans" style="color:#FFF3E2;font-size:58px;line-height:1.2">disent qu'on leur a appris à s'en servir</div>
+    <div class="abs" style="left:64px;right:120px;top:640px">
+      <div id="s3t" class="serif" style="color:#FFF3E2;font-size:104px;line-height:1">Le chiffre</div>
+      <div id="s3n" class="anton" style="color:#FF5A1F;font-size:440px;line-height:1;letter-spacing:-6px">79&nbsp;%</div>
+      <div id="s3l" class="sans" style="color:#FFF3E2;font-size:60px;line-height:1.2">utilisent l'IA pour leurs devoirs</div>
     </div>
   </div>
 
-  <!-- S4 : polaroid -->
-  <div class="scene" id="s4" style="background:#E8E4D8">
-    <div id="s4p" class="abs" style="left:110px;top:300px;width:860px;background:#fff;padding:24px;box-shadow:0 14px 0 rgba(22,22,22,.12)">
-      <img src="nuit.jpg" style="width:812px;height:620px;object-fit:cover;display:block">
+  <!-- 4 : salle de classe (vidéo) -->
+  <div class="scene" id="s4">
+    <img class="bg clip" data-clip="class" alt="">
+    <div class="shade"></div>
+    <div class="abs" style="left:64px;right:120px;top:1180px">
+      <div id="s4a" class="serif" style="color:#FFF3E2;font-size:130px;line-height:1">Et à l'école,</div>
+      <div id="s4b" class="anton" style="color:#FFF3E2;font-size:150px;line-height:1">ON LEUR APPREND ?</div>
+    </div>
+  </div>
+
+  <!-- 5 : compteur 47 sur beige -->
+  <div class="scene" id="s5" style="background:#E8E4D8">
+    <div class="abs" style="left:64px;right:120px;top:640px">
+      <div id="s5t" class="serif" style="color:#161616;font-size:104px;line-height:1">Seulement</div>
+      <div id="s5n" class="anton" style="color:#161616;font-size:440px;line-height:1;letter-spacing:-6px">47&nbsp;%</div>
+      <div id="s5l" class="sans" style="color:#161616;font-size:60px;line-height:1.2">disent qu'on leur a appris à s'en servir</div>
+    </div>
+  </div>
+
+  <!-- 6 : seule la nuit (vidéo) + UN SUR TROIS -->
+  <div class="scene" id="s6">
+    <img class="bg clip" data-clip="alone" alt="">
+    <div class="shade"></div>
+    <div class="abs" style="left:64px;right:120px;top:1150px">
+      <div id="s6a" class="anton" style="color:#FFF3E2;font-size:210px;line-height:.92;transform-origin:0 50%">UN SUR TROIS</div>
+      <div id="s6b" class="serif" style="color:#FFF3E2;font-size:130px;line-height:1"><span style="background:#FF5A1F;color:#161616;padding:0 18px 6px">se débrouille seul.</span></div>
+    </div>
+  </div>
+
+  <!-- 7 : polaroid -->
+  <div class="scene" id="s7" style="background:#E8E4D8">
+    <div id="s7p" class="abs" style="left:110px;top:420px;width:860px;background:#fff;padding:24px;box-shadow:0 14px 0 rgba(22,22,22,.12)">
+      <img src="nuit.jpg" style="width:812px;height:640px;object-fit:cover;display:block" alt="">
       <div class="abs" style="left:50%;top:-20px;width:180px;height:44px;margin-left:-90px;background:rgba(230,220,195,.92);transform:rotate(2deg)"></div>
     </div>
-    <div class="abs" style="left:64px;right:120px;top:1110px">
-      <div id="s4a" class="anton" style="color:#161616;font-size:176px;line-height:.92;letter-spacing:-1px">UN SUR TROIS</div>
-      <div id="s4b" class="serif" style="color:#161616;font-size:120px;line-height:1">se débrouille seul.</div>
+    <div class="abs" style="left:64px;right:120px;top:1240px">
+      <div id="s7a" class="serif" style="color:#161616;font-size:120px;line-height:1">Sans savoir</div>
+      <div id="s7b" class="anton" style="color:#161616;font-size:120px;line-height:1">CE QUI EST DE LA TRICHE</div>
     </div>
   </div>
 
-  <!-- S5 : et toi -->
-  <div class="scene" id="s5" style="background:#FF5A1F">
-    <div class="abs" style="left:64px;right:120px;top:600px">
-      <div id="s5a" class="anton" style="color:#161616;font-size:250px;line-height:.85;letter-spacing:-3px;white-space:nowrap;transform-origin:0 50%">ET TOI&nbsp;?</div>
-      <div id="s5b" class="serif" style="color:#161616;font-size:116px;line-height:1;margin-top:40px">Tu fais partie des 79&nbsp;%&nbsp;?</div>
-      <div id="s5c" class="sans" style="color:#161616;font-size:52px;line-height:1.3;margin-top:40px">Dis-le en commentaire.</div>
+  <!-- 8 : regard (vidéo) + à garder en tête -->
+  <div class="scene" id="s8">
+    <img class="bg clip" data-clip="tired" alt="">
+    <div class="abs" style="inset:0;background:rgba(10,10,12,.55)"></div>
+    <div class="abs" style="left:64px;right:120px;top:700px">
+      <div id="s8a" class="serif" style="color:#FFF3E2;font-size:120px;line-height:1">À garder en tête</div>
+      <div id="s8b" class="anton" style="color:#FF5A1F;font-size:132px;line-height:1;margin-top:30px">C'EST OPENAI</div>
+      <div id="s8c" class="anton" style="color:#FFF3E2;font-size:132px;line-height:1">QUI PUBLIE L'ÉTUDE</div>
     </div>
   </div>
 
-</div>
+  <!-- 9 : et toi -->
+  <div class="scene" id="s9" style="background:#FF5A1F">
+    <div class="abs" style="left:64px;right:120px;top:640px">
+      <div id="s9a" class="anton" style="color:#161616;font-size:250px;line-height:.85;letter-spacing:-3px;white-space:nowrap;transform-origin:0 50%">ET TOI&nbsp;?</div>
+      <div id="s9b" class="serif" style="color:#161616;font-size:116px;line-height:1;margin-top:40px">Tu fais partie des 79&nbsp;%&nbsp;?</div>
+      <div id="s9c" class="sans" style="color:#161616;font-size:54px;line-height:1.3;margin-top:40px">Dis-le en commentaire.</div>
+    </div>
+  </div>
+
+</div><div id="flash"></div></div>
 <script>
-const B = 60/115;               // durée d'un temps
-const S = [0, 8*B, 16*B, 24*B, 32*B, 40*B]; // bornes des scènes
-const clamp = (x)=>Math.max(0,Math.min(1,x));
-const eo = (x)=>1-Math.pow(1-clamp(x),3);
-const back = (x)=>{x=clamp(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
-const $ = (id)=>document.getElementById(id);
-function inUp(el,t,start,dur=0.35,dist=80){const p=eo((t-start)/dur);el.style.opacity=p;el.style.transform=`translateY(${(1-p)*dist}px)`;}
-function pop(el,t,start,dur=0.4,extra=''){const p=back((t-start)/dur);el.style.opacity=clamp((t-start)/0.12);el.style.transform=`scale(${0.6+0.4*p}) ${extra}`;}
-function count(el,t,start,dur,to){const p=eo((t-start)/dur);el.textContent=Math.round(to*p)+' %';}
-window.DURATION = S[5];
-window.render = function(t){
-  for(let i=1;i<=5;i++) $('s'+i).style.display = (t>=S[i-1] && t<S[i]) || (i===5 && t>=S[4]) ? 'block':'none';
-  // S1
-  if(t<S[1]){
-    const z=1.12-0.10*clamp(t/S[1]); $('s1img').style.transform=`scale(${z})`;
-    pop($('s1a'),t,B*1,0.45,'rotate(-2deg)');
-    inUp($('s1b'),t,B*3); inUp($('s1c'),t,B*5,0.3,120);
-  } else if(t<S[2]){ const l=t-S[1];
-    inUp($('s2t'),l,0,0.3,40); $('s2n').style.opacity=1; count($('s2n'),l,B*1,B*3,79); inUp($('s2l'),l,B*4);
-  } else if(t<S[3]){ const l=t-S[2];
-    inUp($('s3t'),l,0,0.3,40); count($('s3n'),l,B*1,B*3,47); inUp($('s3l'),l,B*4);
-  } else if(t<S[4]){ const l=t-S[3];
-    const p=back(l/0.55); $('s4p').style.transform=`translateY(${(1-p)*-900}px) rotate(${-2.5*p+8*(1-p)}deg)`;
-    inUp($('s4a'),l,B*2,0.3,100); inUp($('s4b'),l,B*4);
-  } else { const l=t-S[4];
-    pop($('s5a'),l,0,0.45); inUp($('s5b'),l,B*2); inUp($('s5c'),l,B*4,0.35,40);
+const B = 60/115, FPS = 30;
+// [id, début en temps, fin en temps]
+const SC = [['s1',0,4],['s2',4,8],['s3',8,11],['s4',11,14],['s5',14,17],['s6',17,22],['s7',22,25],['s8',25,30],['s9',30,40]];
+window.DURATION = 40*B;
+const CLIPS = {typing:120, class:120, alone:120, tired:120};
+const clamp=x=>Math.max(0,Math.min(1,x)), eo=x=>1-Math.pow(1-clamp(x),3);
+const back=x=>{x=clamp(x);const c=1.9;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
+const $=id=>document.getElementById(id);
+function hide(el){el.style.opacity=0;}
+function up(el,l,s,d=0.28,dist=90){const p=eo((l-s)/d);el.style.opacity=clamp((l-s)/0.08);el.style.transform=`translateY(${(1-p)*dist}px)`;}
+function slam(el,l,s,d=0.3,rot=0){const p=back((l-s)/d);el.style.opacity=clamp((l-s)/0.05);el.style.transform=`scale(${1.6-0.6*p}) rotate(${rot}deg)`;}
+function slide(el,l,s,d=0.3){const p=eo((l-s)/d);el.style.opacity=clamp((l-s)/0.06);el.style.transform=`translateX(${(1-p)*-700}px)`;}
+function count(el,l,s,d,to){el.textContent=Math.round(to*eo((l-s)/d))+' %';el.style.opacity=l>=s?1:0;}
+window.render = async function(t){
+  const beat=t/B;
+  let cur=null;
+  for(const [id,a,b] of SC){const on=beat>=a&&beat<b; $(id).style.display=on?'block':'none'; if(on) cur=[id,a];}
+  if(!cur) cur=['s9',30];
+  const [id,a]=cur; const l=t-a*B;
+  // caméra : petit coup de zoom sur chaque temps + léger tremblement à l'entrée de scène
+  const ph=beat%1, kick=Math.exp(-ph*6)*0.025, ent=Math.exp(-l*10);
+  $('cam').style.transform=`scale(${1+kick+ent*0.06}) translate(${Math.sin(t*90)*ent*14}px,${Math.cos(t*70)*ent*10}px)`;
+  // flash très court à chaque coupe
+  $('flash').style.opacity = l<0.07 && t>0.1 ? 0.55*(1-l/0.07) : 0;
+  // vidéos
+  const waits=[];
+  for(const img of $(id).querySelectorAll('img.clip')){
+    const n=CLIPS[img.dataset.clip]; const f=Math.min(n,1+Math.floor(l*FPS*1.0));
+    const src=`clips/${img.dataset.clip}_${String(f).padStart(4,'0')}.jpg`;
+    if(!img.src.endsWith(src)){img.src=src; waits.push(img.decode().catch(()=>{}));}
+    img.style.transform=`scale(${1.08+0.06*clamp(l/(4*B))})`;
   }
+  if(id==='s1'){ hide($('s1a')); slam($('s1a'),l,B*1,0.32,-2); }
+  if(id==='s2'){ $('s2img').style.transform=`scale(${1.2-0.12*clamp(l/(4*B))})`; up($('s2w1'),l,0.05); up($('s2w2'),l,B*1); slam($('s2w3'),l,B*2,0.3); }
+  if(id==='s3'){ up($('s3t'),l,0,0.25,40); count($('s3n'),l,B*0.3,B*1,79); up($('s3l'),l,B*1.5); }
+  if(id==='s4'){ slide($('s4a'),l,0.05); slam($('s4b'),l,B*1.2,0.3); }
+  if(id==='s5'){ up($('s5t'),l,0,0.25,40); count($('s5n'),l,B*0.3,B*1,47); up($('s5l'),l,B*1.5); }
+  if(id==='s6'){ slam($('s6a'),l,B*0.5,0.32); up($('s6b'),l,B*2); }
+  if(id==='s7'){ const p=back(l/0.45); $('s7p').style.transform=`translateY(${(1-p)*-1000}px) rotate(${-2.5*p+10*(1-p)}deg)`; slide($('s7a'),l,B*1); slam($('s7b'),l,B*1.8,0.3); }
+  if(id==='s8'){ up($('s8a'),l,0.05); slam($('s8b'),l,B*1.5,0.3); slam($('s8c'),l,B*2.5,0.3); }
+  if(id==='s9'){ const p=back(l/0.4); $('s9a').style.opacity=clamp(l/0.05); $('s9a').style.transform=`scale(${1.5-0.5*p}) rotate(${Math.sin(l*6)*1.2}deg)`; up($('s9b'),l,B*2); up($('s9c'),l,B*4,0.3,40); }
+  await Promise.all(waits);
 };
-render(0);
 </script>
 </body>
 </html>
