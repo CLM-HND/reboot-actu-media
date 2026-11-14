@@ -43,7 +43,7 @@ Exactement 5, en minuscules, sans accents, à la fin de la description :
 5. un hashtag d'audience : `#etudiant`, `#gamer`, `#geek`, `#nouvelletechnologie`…
 Préférer les hashtags précis et moyennement utilisés aux énormes hashtags génériques (#tech, #ai) où le post est noyé.
 
-## Reels (lundi, mercredi, vendredi)
+## Reels (tous les jours, sur la même news que le carrousel)
 - Motion design vertical 1080×1920, 22–28 s, SANS voix (Clément ne veut pas de voix de synthèse).
 - DYNAMIQUE mais LISIBLE (retours de Clément) : 8 à 10 scènes ; une scène sans texte important peut durer 2 s, mais une scène avec une info (chiffre, phrase) reste au moins 2,5 s APRÈS que tout le texte est affiché, pour qu'on ait le temps de lire. PAS de secousses ni de coups de zoom caméra sur le temps (« ça n'apporte rien »). mélange de VRAIS EXTRAITS VIDÉO Adobe Stock (gratuits, contentType "Video", pricing "free", licence en 1080) et de photos, mots qui arrivent un par un sur le temps, titres qui « claquent » (zoom 1,6→1 avec rebond), compteurs de chiffres, flash court à chaque coupe, polaroid qui tombe.
 - Au moins 3 extraits vidéo différents par Reel. Découpe-les avec ffmpeg en images JPEG 1080×1920 à 30 i/s (crop 9:16) dans un dossier clips/ et charge-les image par image (voir le modèle).
