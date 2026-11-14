@@ -1,4 +1,4 @@
-Grosse panne Microsoft : Outlook, Teams, OneDrive et Copilot ont planté pendant près de 24 h dans le monde entier, à partir de jeudi soir. Plus de 131 000 signalements au pic rien qu'aux États-Unis, 74 pays touchés, et Microsoft assure que ce n'est pas une cyberattaque.
+Grosse panne Microsoft : Outlook a planté pendant près de 24 h dans le monde entier à partir de jeudi soir, avec des bugs aussi sur Teams, OneDrive et Copilot. Plus de 131 000 signalements au pic rien qu'aux États-Unis, 74 pays touchés, et Microsoft assure que ce n'est pas une cyberattaque.
 
 Et toi, t'as raté un mail ou un cours à cause de la panne ? 👇
 
