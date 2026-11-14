@@ -1,0 +1,4 @@
+date: 2026-11-14
+heure: 08:00:30 (Europe/Paris)
+media_id: 17888299995504928
+type: carousel (7 images)
