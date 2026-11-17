@@ -1,0 +1,7 @@
+Cyberattaque : Zoom, la BBC, CNN, IKEA et HSBC font partie des 178 organisations dont les sites ont servi du code piégé ce lundi, via une faille de l'outil Optimizely. Le script détournait de la crypto, copiait des cartes bancaires et visait les iPhone pas à jour.
+
+Tu fais tes mises à jour tout de suite ? Dis-le en commentaire 👇
+
+Source : Report URI (chercheurs en sécurité, 16 novembre), déclaration d'Optimizely, relayées par BNO News et Gizmodo.
+
+#actutech #cybersecurite #piratage #iphone #etudiant
