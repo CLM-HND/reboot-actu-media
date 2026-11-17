@@ -1,0 +1,7 @@
+Cyberattaque : Zoom, la BBC, CNN, IKEA, Air France-KLM et la banque HSBC font partie des 178 organisations dont les sites ont servi du code malveillant ce lundi 16 novembre, via une faille de l'outil Optimizely. Pendant environ 17 heures, le script pouvait détourner des paiements en crypto, copier des numéros de carte bancaire et viser les iPhone pas à jour : pense à mettre ton iPhone à jour (iOS 18.7.3 ou 26.3 minimum).
+
+Et toi, tu fais tes mises à jour tout de suite ou tu cliques sur « plus tard » ? 👇
+
+Source : Report URI (chercheurs en sécurité, 16 novembre), déclaration d'Optimizely, relayées par BNO News et Gizmodo.
+
+#actutech #cybersecurite #piratage #iphone #etudiant
