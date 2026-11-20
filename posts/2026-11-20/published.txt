@@ -1,3 +1,5 @@
-statut : en cours
+statut : incertain
 date : 2026-11-20
-début : 2026-11-20T07:58:22+01:00
+heure : 2026-11-20T08:00:51+01:00
+erreur : Error calling tool 'execute_action': Instagram write action failed for account 17841423347282008: Application request limit reached
+Ne pas republier automatiquement : vérifier manuellement sur Instagram.
