@@ -1,0 +1,9 @@
+Signal bloque les captures d'écran sur iPhone pour empêcher l'IA du téléphone, Siri AI chez Apple et Gemini chez Google, de lire tes messages. L'option « Bloquer Siri AI » est activée par défaut sur iOS 27, et sur Android, Signal active sa « Sécurité de l'écran » quand il repère une IA qui lit l'écran.
+
+Signal reconnaît lui-même que ce n'est pas une protection totale, et demande à Apple, Google et Microsoft un vrai moyen d'exclure une appli de leurs IA.
+
+Tu laisserais une IA lire tes messages ? Dis-le en commentaire 👇
+
+Source : Signal, via 9to5Mac, Engadget et CyberInsider (20 novembre 2026)
+
+#actutech #cybersecurite #signalapp #siri #geek
