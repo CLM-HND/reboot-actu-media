@@ -1,3 +1,4 @@
-statut : en cours
-date : 2026-11-22 07:59:30 CET
+statut : publié
+date : 2026-11-22 08:00:48 CET
 commit : 214c7ef41f9187c574576c7ec67f398ae76ab6fe
+media_id : 18156348733531849
