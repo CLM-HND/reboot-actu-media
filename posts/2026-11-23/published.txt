@@ -1,3 +1,5 @@
-statut : en cours
-date : 2026-11-23 07:58:27 CET
+statut : incertain
+date : 2026-11-23 07:59:37 CET
 commit des médias : 21225492e191e3622b7acef896df32d6fc796b65
+erreur : Error calling tool 'execute_action': Instagram write action failed for account 17841423347282008: Application request limit reached: Wir schränken bestimmte Handlungen ein, um unsere Community zu schützen. Sag uns, wenn wir deiner Meinung nach einen Fehler gemacht haben.
+note : un seul appel effectué, aucune nouvelle tentative. Vérifier sur Instagram.
