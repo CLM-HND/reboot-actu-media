@@ -1,2 +1,3 @@
-statut : en cours
-date : 2026-11-24 07:59:38
+statut : publié
+date : 2026-11-24 08:01:29
+id : 17931885126186576
