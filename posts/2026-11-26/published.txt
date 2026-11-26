@@ -1,2 +1,3 @@
-statut : en cours
-date : 2026-11-26T07:58:14+01:00
+statut : incertain
+date : 2026-11-26T07:59:30+01:00
+erreur : Instagram write action failed for account 17841423347282008: Application request limit reached: Wir schränken bestimmte Handlungen ein, um unsere Community zu schützen. Sag uns, wenn wir deiner Meinung nach einen Fehler gemacht haben.
