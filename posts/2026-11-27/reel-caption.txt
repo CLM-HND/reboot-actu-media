@@ -1,0 +1,7 @@
+1Password piraté : le gestionnaire de mots de passe confirme qu'un pirate est passé par le compte GitHub d'un salarié et a volé des noms, des adresses e-mail et du code source. Selon l'entreprise, les coffres et les mots de passe enregistrés sont intacts, mais méfie-toi des faux mails « 1Password ».
+
+Tes mots de passe, tu les ranges où ? Dis-le en commentaire 👇
+
+Source : communiqué de 1Password du 25 novembre, MacRumors, Help Net Security, The Hacker News et SecurityWeek (25-26 novembre).
+
+#actutech #cybersecurite #1password #motdepasse #etudiant
