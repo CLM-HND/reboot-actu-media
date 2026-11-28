@@ -1,3 +1,4 @@
-statut : en cours
-date : 2026-11-28 07:59:45 CET
+statut : publié
+date : 2026-11-28 08:00:48 CET
 commit média : 3f9962d9f33561ebd8b9e0212e6415aa790599a3
+id média Instagram : 18080809106455553
