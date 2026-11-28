@@ -1,3 +1,5 @@
-statut : en cours
-date : 2026-11-28 07:57:53 CET
+statut : incertain
+date : 2026-11-28 07:59:43 CET
 commit média : 3f9962d9f33561ebd8b9e0212e6415aa790599a3
+erreur exacte : Error calling tool 'execute_action': Instagram write action failed for account 17841423347282008: Application request limit reached: We restrict certain activity to protect our community. Tell us if you think we made a mistake.
+NE PAS republier automatiquement : vérifier sur Instagram si le carrousel est en ligne.
